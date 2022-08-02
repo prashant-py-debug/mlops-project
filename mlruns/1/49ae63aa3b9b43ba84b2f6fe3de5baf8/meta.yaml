@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/mlops/project/mlruns/1/49ae63aa3b9b43ba84b2f6fe3de5baf8/artifacts
+end_time: 1659358896405
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 49ae63aa3b9b43ba84b2f6fe3de5baf8
+run_uuid: 49ae63aa3b9b43ba84b2f6fe3de5baf8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1659358896358
+status: 3
+tags: []
+user_id: Prashant Sharma
