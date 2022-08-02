@@ -116,7 +116,7 @@ def train_best_model(best_param,X,y):
         )
 
 @flow(task_runner=SequentialTaskRunner())
-def main():
+def pipeline():
 
     set_mlflowTracking()
     X,y = load_data(DATA_PATH).result()
@@ -125,7 +125,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    pipeline()
     
     
 
