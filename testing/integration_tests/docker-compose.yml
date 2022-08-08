@@ -1,0 +1,9 @@
+version : '3.7'
+services:
+  test-model:
+    build: ./web_service
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - './artifacts:/app/artifacts'
