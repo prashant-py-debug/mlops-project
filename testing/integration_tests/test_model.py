@@ -2,13 +2,8 @@ import json
 import requests
 
 
-payload = json.dumps({
-                        "AT_1": 1.44,
-                        "AT_2": -0.144
-                        })
-headers = {
-    'Content-Type': 'application/json'
-    }
+payload = json.dumps({"AT_1": 1.44, "AT_2": -0.144})
+headers = {"Content-Type": "application/json"}
 
 
 URL = "http://localhost:8000/prediction"

@@ -19,6 +19,7 @@ pytest = "*"
 ipykernel = "*"
 mlflow = "*"
 pylint = "*"
+black = "*"
 
 [requires]
 python_version = "3.9"
