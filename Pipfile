@@ -9,6 +9,10 @@ matplotlib = "*"
 seaborn = "*"
 scikit-learn = "*"
 prefect = "==2.0b5"
+fastapi = "*"
+uvicorn = "*"
+evidently = "*"
+pymongo = "*"
 
 [dev-packages]
 ipykernel = "*"

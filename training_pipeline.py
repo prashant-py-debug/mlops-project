@@ -12,7 +12,7 @@ from prefect.task_runners import SequentialTaskRunner
 
 warnings.filterwarnings("ignore")
 
-DATA_PATH = os.getenv("DATA path" , "banana/banana.csv")
+DATA_PATH = os.getenv("DATA_path" , "banana/banana.csv")
 
 @task
 def set_mlflowTracking():

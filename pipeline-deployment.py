@@ -6,7 +6,7 @@ from datetime import timedelta
 
 
 DeploymentSpec(
-    name="Banana-model-pipeline",
+    name="Banana_model_pipeline",
     flow_location="training_pipeline.py",
     flow_runner = SubprocessFlowRunner(),
     schedule=IntervalSchedule(interval = timedelta(minutes = 10)),

@@ -1,0 +1,46 @@
+version : '3.7'
+services:
+  prediction-service: 
+    build: ./web_service
+    ports:
+      - "8000:8000"
+    environment:
+      MONGODB_ADDRESS: "mongodb://mongo.:27017/"
+
+    volumes:
+      - './artifacts:/app/artifacts'
+
+    depends_on:
+      - 'mongo'
+    networks:
+      - back-net
+
+  monitoring-service:
+    build: ./evidently_service
+    ports:
+      - "8001:8001"
+    environment:
+      MONGODB_ADDRESS: "mongodb://mongo.:27017/"
+    networks:
+      - back-net
+    depends_on:
+      - 'prediction-service'
+    volumes:
+      - './evidently_service/dashboards:/app/dashboards'
+
+  
+  mongo:
+    image: mongo
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - back-net
+    
+
+volumes:
+  mongo_data:
+
+networks:
+  back-net:

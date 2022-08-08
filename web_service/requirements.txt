@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+pymongo
+mlflow
+scikit-learn
