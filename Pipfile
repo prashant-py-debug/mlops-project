@@ -18,6 +18,7 @@ pytest = "*"
 [dev-packages]
 ipykernel = "*"
 mlflow = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.9"

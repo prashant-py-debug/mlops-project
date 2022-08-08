@@ -1,13 +1,15 @@
-import pandas as pd
-import requests
-import json
 import os
+import json
+import requests
+import pandas as pd
+
+
 
 DATA_PATH = os.getenv("data_path" , "banana/banana.csv")
 URL = os.getenv('url',"http://localhost:8000/prediction")
 
-def send_requests(DATA_PATH,URL):
-
+def send_requests():
+    '''sends continuous requests to api'''
 
     data = pd.read_csv(DATA_PATH)
     headers = {
@@ -26,4 +28,4 @@ def send_requests(DATA_PATH,URL):
         print(response)
 
 if __name__ == "__main__":
-    send_requests(DATA_PATH,URL)
+    send_requests()

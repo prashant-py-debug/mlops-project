@@ -1,0 +1,15 @@
+[tool.pylint.messages_control]
+
+max-line-length = 88
+
+disable = [
+  "no-name-in-module",
+  "invalid-name",
+  "missing-module-docstring",
+  "too-few-public-methods",
+  "missing-final-newline",
+  "bare-except",
+  "invalid-envvar-default",
+  "no-member",
+  "inconsistent-return-statements"
+]

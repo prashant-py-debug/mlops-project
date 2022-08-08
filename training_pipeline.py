@@ -16,6 +16,8 @@ DATA_PATH = os.getenv("DATA_path" , "banana/banana.csv")
 
 @task
 def set_mlflowTracking():
+    """
+    set tracking uri for mlflow """
     mlflow.set_tracking_uri("http://localhost:5000")
 
 
@@ -36,7 +38,8 @@ def prepare(X,y):
     splits data into train and test set
     '''
     
-    X_train , X_test , y_train , y_test = train_test_split(X , y , test_size=0.2 , random_state=1234 )
+    X_train , X_test , y_train , y_test = train_test_split(X ,
+                     y , test_size=0.2 , random_state=1234 )
 
     return X_train , X_test , y_train , y_test
 
@@ -97,6 +100,8 @@ def hyperparameter_tunning(X,y):
 @task
 def train_best_model(best_param,X,y):
 
+    '''train model with best params'''
+
     with mlflow.start_run():
         mlflow.set_experiment("Banana Experiment")
         mlflow.set_tag('model','best_random_forest')
@@ -117,6 +122,8 @@ def train_best_model(best_param,X,y):
 
 @flow(task_runner=SequentialTaskRunner())
 def pipeline():
+
+    '''flow function to execute tasks'''
 
     set_mlflowTracking()
     X,y = load_data(DATA_PATH).result()
