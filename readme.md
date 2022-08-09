@@ -1,3 +1,9 @@
+# Objective
+Our objective is to build a complete system for ML applications where we can track experiments and save artifacts, deploy ML models and monitor models.
+
+I have used simple Banana dataset which is a binary dataset.
+
+
 # System Archietecture Design
 
 ![plot](./system-arch.drawio.png)
