@@ -5,8 +5,12 @@ services:
     image: prashantdockerio/prediction-service
     ports:
       - "8000:8000"
+    command: uvicorn app:app --host 0.0.0.0
     environment:
       MONGODB_ADDRESS: "mongodb://mongo.:27017/"
+      RUN_ID: "14151288b1d54c558c607575a5031193"
+      EXP_ID: 1
+
 
     volumes:
       - './artifacts:/app/artifacts'
