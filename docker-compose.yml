@@ -1,7 +1,8 @@
 version : '3.7'
 services:
-  prediction-service: 
+  prediction-service:
     build: ./web_service
+    image: prashantdockerio/prediction-service
     ports:
       - "8000:8000"
     environment:
@@ -17,6 +18,7 @@ services:
 
   monitoring-service:
     build: ./evidently_service
+    image: prashantdockerio/monitoring-service
     ports:
       - "8001:8001"
     environment:
@@ -28,7 +30,7 @@ services:
     volumes:
       - './evidently_service/dashboards:/app/dashboards'
 
-  
+
   mongo:
     image: mongo
     ports:
@@ -37,7 +39,7 @@ services:
       - mongo_data:/data/db
     networks:
       - back-net
-    
+
 
 volumes:
   mongo_data:
