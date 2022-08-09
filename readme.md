@@ -45,3 +45,21 @@ The webservice app will pick up the model from the artifacts and deploy it.
 
 
 ** If you don't want to launch the training job, you can directly do docker-compose up to start the services.
+
+## Continuous Integration
+On every push and pull request on main, Github CI pipelines starts , it builds the docker images and pushes them to DockerHub.
+
+## Technologies Used
+
+1. FastAPI
+2. MLFLOW
+3. Prefect
+4. Docker
+5. Docker-compose
+6. Pytest
+7. Pylint
+8. Black
+9. Isort
+10. Pre-commit hooks
+11. Github actions CI
+12. EvidentlyAI
